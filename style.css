@@ -1,0 +1,167 @@
+/*Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI';
+  line-height: 1.6;
+  background-color: #f0f4f8;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+  background-color: #1f2937;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffffffcc;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #4ade80;
+}
+
+/* Section Containers */
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Section Headings */
+h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #334155;
+}
+
+/* Lists */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #1e293b;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Projects Section */
+.project {
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project h2 {
+  color: #0f172a;
+  font-size: 1.5rem;
+}
+
+.project a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: #1e40af;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsive Design*/
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+form {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e40af;
+}
