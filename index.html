@@ -1,149 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prakash | Backend Developer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Raj Badugula | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Prakash Raj Badugula - B.Tech CSE student at VIT-AP University, MERN Stack Developer, and AI Enthusiast.">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="stars"></canvas>
+    <div class="nebula-tl"></div>
+    <div class="nebula-br"></div>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#intro">About</a> |
-    <a href="#skills">Tech Stack</a> |
-    <a href="#projects">Projects</a> |
-    <a href="#objective">Career</a> |
-    <a href="#certifications">Certifications</a> |
-    <a href="#contact">Contact</a>
-  </nav>
+    <header id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                Prakash<span class="brand-dot">.</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                Hire Me
+            </button>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
 
-  <!-- Introduction Section -->
-  <section id="intro">
-    <div class="container">
-      <h1>About Me</h1>
-      <h2>Hi, I’m Prakash – Backend Developer</h2>
-      <p>
-        I enjoy building web applications using Node.js, Express, and MongoDB. I’ve created fun and useful projects like a weather app, joke & meme generator, and logic-based games. <br><br>
-        I work with tools like VS Code, GitHub, and Thunder Client to write clean code and test APIs easily. I'm always learning and improving through hands-on practice and building meaningful projects.
-      </p>
-    </div>
-  </section>
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="hero-name">Prakash</span>.<br>
+                I build for the<br>
+                <span class="hero-rotating-wrap">
+                    <span id="hero-rotating">web & AI</span>
+                </span>
+            </h1>
+            <p class="hero-sub">
+                Full Stack Developer & AI Enthusiast. B.Tech CSE at VIT-AP University
+                with a 9.53 CGPA — building scalable MERN applications and
+                intelligent systems with LangChain and RAG.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-ghost">Get in Touch</a>
+            </div>
+            <div class="hero-meta">
+                <span>VIT-AP University</span>
+                <span class="meta-sep">·</span>
+                <span>CGPA 9.53</span>
+                <span class="meta-sep">·</span>
+                <span>Andhra Pradesh, India</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- Tech Stack Section -->
-  <section id="skills">
-    <div class="container">
-      <h1>Tech Stack</h1>
-      <h2>Technologies I Work With:</h2>
-      <ul>
-        <li><b>Programming Languages:</b> Java, Python</li>
-        <li><b>Frontend:</b> HTML, CSS, JavaScript, React</li>
-        <li><b>Backend:</b> Node.js, Express.js.</li>
-        <li><b>Database:</b> MongoDB, MySQL</li>
-        <li><b>Tools:</b> VS Code, MongoDB Compass, Thunder Client, GitHub</li>
-      </ul>
-    </div>
-  </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-bio" data-reveal style="--i:0">
+                    <p>I'm a third-year B.Tech Computer Science student at VIT-AP University,
+                    maintaining a 9.53 CGPA. I specialise in building full-stack web applications
+                    with the MERN stack and intelligent AI systems using LangChain, RAG
+                    architecture, and Python.</p>
+                    <p>I interned at Ecnodev IT Solutions, where I designed a Resume Parsing
+                    and Job Recommendation System. I enjoy solving real problems — from
+                    scam detection engines to medical chatbots — with clean, efficient code.</p>
+                    <a href="#contact" class="btn-ghost" style="margin-top: 8px; width: fit-content;">
+                        Let's connect →
+                    </a>
+                </div>
+                <div class="about-right" data-reveal style="--i:1">
+                    <div class="info-card">
+                        <div class="info-row"><span>University</span><span>VIT-AP University</span></div>
+                        <div class="info-row"><span>Degree</span><span>B.Tech CSE</span></div>
+                        <div class="info-row"><span>Year</span><span>3rd Year (2023–Present)</span></div>
+                        <div class="info-row"><span>CGPA</span><span class="info-highlight">9.53 / 10.0</span></div>
+                        <div class="info-row"><span>Specialisation</span><span>MERN Stack & AI/ML</span></div>
+                        <div class="info-row border-none"><span>Status</span>
+                            <span class="status-open">● Open to Work</span>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <div class="stat-item"><span class="stat-num" data-target="199">0</span><span class="stat-label">LeetCode Problems</span></div>
+                        <div class="stat-item"><span class="stat-num" data-target="8">0</span><span class="stat-label">Projects Built</span></div>
+                        <div class="stat-item"><span class="stat-num" data-target="7">0</span><span class="stat-label">Certifications</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h1>Projects</h1>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group" data-reveal style="--i:0">
+                    <h3 class="skill-group-title">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal style="--i:1">
+                    <h3 class="skill-group-title">Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">React.js</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal style="--i:2">
+                    <h3 class="skill-group-title">Backend & Database</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">RESTful APIs</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal style="--i:3">
+                    <h3 class="skill-group-title">AI / ML</h3>
+                    <div class="skill-tags">
+                        <span class="tag ai">LangChain</span>
+                        <span class="tag ai">RAG Architecture</span>
+                        <span class="tag ai">scikit-learn</span>
+                        <span class="tag ai">pandas</span>
+                        <span class="tag ai">HuggingFace</span>
+                    </div>
+                </div>
+            </div>
+            <div class="proficiency" data-reveal style="--i:4">
+                <div class="prof-row">
+                    <span class="prof-name">Node.js</span>
+                    <div class="prof-track"><div class="prof-fill" data-w="90"></div></div>
+                    <span class="prof-pct">90%</span>
+                </div>
+                <div class="prof-row">
+                    <span class="prof-name">React.js</span>
+                    <div class="prof-track"><div class="prof-fill" data-w="85"></div></div>
+                    <span class="prof-pct">85%</span>
+                </div>
+                <div class="prof-row">
+                    <span class="prof-name">MongoDB</span>
+                    <div class="prof-track"><div class="prof-fill" data-w="85"></div></div>
+                    <span class="prof-pct">85%</span>
+                </div>
+                <div class="prof-row">
+                    <span class="prof-name">Python</span>
+                    <div class="prof-track"><div class="prof-fill" data-w="80"></div></div>
+                    <span class="prof-pct">80%</span>
+                </div>
+                <div class="prof-row">
+                    <span class="prof-name">LangChain</span>
+                    <div class="prof-track"><div class="prof-fill" data-w="75"></div></div>
+                    <span class="prof-pct">75%</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="project">
-        <h2>1. Guessing a Number</h2>
-        <p>A simple JavaScript game where users try to guess a random number (1–100) within 5 attempts, with real-time feedback and dynamic styling based on guess accuracy.</p>
-        <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
-        <a href="https://github.com/Prakash453345/NUMBER_GUESSING.git" target="_blank">GitHub Link</a><br><br>
-        <a href="https://prakash453345.github.io/NUMBER_GUESSING/" target="_blank">Live Demo</a>
-      </article>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="filter-tabs" data-reveal style="--i:0">
+                <button class="ftab active" data-f="all">All</button>
+                <button class="ftab" data-f="ai">AI / ML</button>
+                <button class="ftab" data-f="web">Web</button>
+                <button class="ftab" data-f="game">Games</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <article class="project-card" data-f="ai" data-reveal style="--i:1">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag ai">AI / ML</span>
+                            <span class="tag featured">★ Featured</span>
+                        </div>
+                        <span class="pc-date">Jan 2026</span>
+                    </div>
+                    <h3 class="pc-title">ScamScope</h3>
+                    <p class="pc-sub">AI-Based Scam Risk Analyzer</p>
+                    <p class="pc-desc">RAG-driven detection engine with explainable risk scores and real-time behavioral message analysis via Streamlit.</p>
+                    <div class="pc-tech">
+                        <span>LangChain</span><span>ChromaDB</span><span>Gemini API</span><span>Streamlit</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                        <a href="#" class="pc-link accent">Live Demo ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="ai" data-reveal style="--i:2">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag ai">AI / ML</span>
+                            <span class="tag featured">★ Featured</span>
+                        </div>
+                        <span class="pc-date">Jul 2025</span>
+                    </div>
+                    <h3 class="pc-title">Medical Chatbot</h3>
+                    <p class="pc-sub">Intelligent Health Suggestion System</p>
+                    <p class="pc-desc">Conversational AI for personalized medical recommendations using LangChain, RAG architecture, and Python.</p>
+                    <div class="pc-tech">
+                        <span>LangChain</span><span>RAG</span><span>Python</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="ai" data-reveal style="--i:3">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag ai">AI / ML</span>
+                        </div>
+                        <span class="pc-date">Internship</span>
+                    </div>
+                    <h3 class="pc-title">Resume Parser</h3>
+                    <p class="pc-sub">Job Recommendation System</p>
+                    <p class="pc-desc">Developed during internship: semantic job matching via HuggingFace embeddings and vector similarity search.</p>
+                    <div class="pc-tech">
+                        <span>Flask</span><span>LangChain</span><span>HuggingFace</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="web" data-reveal style="--i:4">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag">Web</span>
+                        </div>
+                        <span class="pc-date">Web App</span>
+                    </div>
+                    <h3 class="pc-title">Weather by Location</h3>
+                    <p class="pc-sub">Real-Time Weather Application</p>
+                    <p class="pc-desc">Location-based weather app using Geolocation API and OpenWeatherMap with dynamic backgrounds.</p>
+                    <div class="pc-tech">
+                        <span>Geolocation API</span><span>OpenWeatherMap API</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="web" data-reveal style="--i:5">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag">Web</span>
+                        </div>
+                        <span class="pc-date">Web App</span>
+                    </div>
+                    <h3 class="pc-title">Meme Generator</h3>
+                    <p class="pc-sub">Random Joke & Meme Aggregator</p>
+                    <p class="pc-desc">Dynamic content renderer using Async JS and Reddit/Official-Joke APIs with interactive DOM manipulation.</p>
+                    <div class="pc-tech">
+                        <span>Async JS</span><span>Reddit API</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="game" data-reveal style="--i:6">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag">Game</span>
+                        </div>
+                        <span class="pc-date">Game</span>
+                    </div>
+                    <h3 class="pc-title">Mine Dodger</h3>
+                    <p class="pc-sub">Interactive Arcade Game</p>
+                    <p class="pc-desc">Retro-style mine-dodging game built with Vanilla JavaScript and dynamic mine placement algorithms.</p>
+                    <div class="pc-tech">
+                        <span>JavaScript</span><span>DOM Manipulation</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="game" data-reveal style="--i:7">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag">Game</span>
+                        </div>
+                        <span class="pc-date">Game</span>
+                    </div>
+                    <h3 class="pc-title">Rock-Paper-Scissors</h3>
+                    <p class="pc-sub">Browser-Based Game</p>
+                    <p class="pc-desc">Computer opponent game with 5-round scoring, interactive feedback, and styled results display.</p>
+                    <div class="pc-tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project-card" data-f="game" data-reveal style="--i:8">
+                    <div class="pc-top">
+                        <div class="pc-tags">
+                            <span class="tag">Game</span>
+                        </div>
+                        <span class="pc-date">Game</span>
+                    </div>
+                    <h3 class="pc-title">Number Guessing</h3>
+                    <p class="pc-sub">Interactive Guessing Game</p>
+                    <p class="pc-desc">5-attempt number guessing with real-time feedback and dynamic styling based on proximity.</p>
+                    <div class="pc-tech">
+                        <span>JS</span><span>Dynamic Feedback</span>
+                    </div>
+                    <div class="pc-footer">
+                        <a href="#" class="pc-link">GitHub ↗</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-      <article class="project">
-        <h2>2. Rock-Paper-Scissors Game</h2>
-        <p>A browser-based Rock-Paper-Scissors game against a computer opponent with a 5-round limit. Features include real-time score tracking, interactive feedback, styled results, and a reset option for replay.</p>
-        <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
-        <a href="https://github.com/Prakash453345/ROCK_PAPER_SCISSOR.git" target="_blank">GitHub Link</a><br><br>
-        <a href="https://prakash453345.github.io/ROCK_PAPER_SCISSOR/" target="_blank">Live Demo</a>
-      </article>
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="tl-item" data-reveal style="--i:0">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-title">AI Intern</h3>
+                                <div class="tl-org">Ecnodev IT Solutions Pvt. Ltd.</div>
+                            </div>
+                            <span class="tl-date">Jun – Sep 2025</span>
+                        </div>
+                        <ul class="tl-points">
+                            <li>Designed and built a Resume Parsing & Job Recommendation System using Flask, LangChain, and ChromaDB.</li>
+                            <li>Optimised semantic job matching through PDF/DOCX parsing, HuggingFace embeddings, and vector similarity search.</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag ai">LangChain</span>
+                            <span class="tag ai">ChromaDB</span>
+                            <span class="tag ai">HuggingFace</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item" data-reveal style="--i:1">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-title">Full Stack Developer (Academic)</h3>
+                                <div class="tl-org">Self / VITAP</div>
+                            </div>
+                            <span class="tl-date">Sep 2024 – Present</span>
+                        </div>
+                        <ul class="tl-points">
+                            <li>Built full-stack web applications using MERN stack, implemented authentication with Passport.js.</li>
+                            <li>Developed role-based access control systems.</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span class="tag">MERN Stack</span>
+                            <span class="tag">Passport.js</span>
+      
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-divider">Education</div>
+                <div class="tl-item" data-reveal style="--i:2">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-title">B.Tech CSE</h3>
+                                <div class="tl-org">VIT-AP University</div>
+                            </div>
+                            <span class="tl-date">2023 – Present</span>
+                        </div>
+                        <ul class="tl-points">
+                            <li>Current CGPA: 9.53</li>
+                            <li>Specialized in Data Structures and Algorithms.</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span class="grade-badge">CGPA 9.53</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item" data-reveal style="--i:3">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-title">Intermediate PCM</h3>
+                                <div class="tl-org">Bhashyam Junior College</div>
+                            </div>
+                            <span class="tl-date">2023</span>
+                        </div>
+                        <ul class="tl-points">
+                            <li>Completed Intermediate education in Physics, Chemistry, Mathematics</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span class="grade-badge">97.9%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item" data-reveal style="--i:4">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-title">Class X CBSE</h3>
+                                <div class="tl-org">Vignan High School</div>
+                            </div>
+                            <span class="tl-date">2021</span>
+                        </div>
+                        <ul class="tl-points">
+                            <li>Achieved 91.6% in CBSE Class X examinations</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span class="grade-badge">91.6%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="project">
-        <h2>3. Weather by Location</h2>
-        <p>A location-based weather app using the Geolocation API and OpenWeatherMap. On button click, it fetches real-time weather data and dynamically displays temperature, humidity, wind speed, and background visuals based on the temperature.</p>
-        <p><b>Technologies Used:</b> HTML, CSS, JavaScript, OpenWeatherMap API</p>
-        <a href="https://github.com/Prakash453345/WEATHER_UPDATE.git" target="_blank">GitHub Link</a><br><br>
-        <a href="https://prakash453345.github.io/WEATHER_UPDATE/" target="_blank">Live Demo</a>
-      </article>
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certs-grid">
+                <div class="cert-card" data-reveal style="--i:0">
+                    <div class="cert-issuer">AWS</div>
+                    <div class="cert-name">AWS Academy Graduate – Cloud Architecting</div>
+                    <div class="cert-year">2025</div>
+                </div>
+                <div class="cert-card" data-reveal style="--i:1">
+                    <div class="cert-issuer">AWS</div>
+                    <div class="cert-name">AWS Academy Graduate – Cloud Foundations</div>
+                    <div class="cert-year">2025</div>
+                </div>
+                <div class="cert-card" data-reveal style="--i:2">
+                    <div class="cert-issuer">Oracle</div>
+                    <div class="cert-name">Oracle Certified Professional (Java SE)</div>
+                    <div class="cert-year">2025</div>
+                </div>
+                <div class="cert-card" data-reveal style="--i:3">
+                    <div class="cert-issuer">Oracle</div>
+                    <div class="cert-name">Oracle Certified GEN-AI Professional</div>
+                    <div class="cert-year">2024</div>
+                </div>
+                <div class="cert-card" data-reveal style="--i:4">
+                    <div class="cert-issuer">freeCodeCamp</div>
+                    <div class="cert-name">JavaScript Developer Certification</div>
+                    <div class="cert-year">2024</div>
+                </div>
+                <div class="cert-card" data-reveal style="--i:5">
+                    <div class="cert-issuer">Forage</div>
+                    <div class="cert-name">Web Development Virtual Internship</div>
+                    <div class="cert-year">2024</div>
+                </div>
+            </div>
+            <div class="achievements-row">
+                <div class="achieve-card" data-reveal style="--i:7">
+                    <span class="achieve-icon">🔥</span>
+                    <div>
+                        <div class="achieve-title">190+ Problems Solved</div>
+                        <div class="achieve-sub">LeetCode</div>
+                    </div>
+                </div>
+                <div class="achieve-card" data-reveal style="--i:8">
+                    <span class="achieve-icon">🏅</span>
+                    <div>
+                        <div class="achieve-title">50-Day Consistency Badge</div>
+                        <div class="achieve-sub">LeetCode</div>
+                    </div>
+                </div>
+                <div class="achieve-card" data-reveal style="--i:9">
+                    <span class="achieve-icon">⭐</span>
+                    <div>
+                        <div class="achieve-title">5-Star Java Badge</div>
+                        <div class="achieve-sub">HackerRank</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <article class="project">
-        <h2>4. Random Joke & Meme Generator</h2>
-        <p>Built a fun web app that fetches random jokes and memes using public APIs, with dynamic content rendering through DOM manipulation and async JavaScript.</p>
-        <p><b>Technologies Used:</b> HTML, CSS, JavaScript, Reddit API</p>
-        <a href="https://github.com/Prakash453345/RANDOM-MEME-GENERATOR.git" target="_blank">GitHub Link</a><br><br>
-        <a href="https://prakash453345.github.io/RANDOM-MEME-GENERATOR/" target="_blank">Live Demo</a>
-      </article>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal style="--i:0">
+                    <h3 class="contact-heading">Let's work together.</h3>
+                    <p class="contact-sub">Open to internships, collaborations, and full-time roles. Reach out — I reply fast.</p>
+                    <div class="contact-details">
+                        <a href="mailto:prakashraj.badugula@gmail.com" class="contact-row">
+                            <span class="cr-icon">✉</span>
+                            <span>prakashraj.badugula@gmail.com</span>
+                        </a>
+                        <div class="contact-row">
+                            <span class="cr-icon">📍</span>
+                            <span>VIT-AP University, Andhra Pradesh</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="cr-icon">📱</span>
+                            <span>+91-9063938804</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://linkedin.com/in/prakash-badugula-78ba90315/" class="btn-ghost" target="_blank">LinkedIn ↗</a>
+                        <a href="https://prakash453345.github.io/Portfolio/" class="btn-ghost" target="_blank">GitHub ↗</a>
+                    </div>
+                </div>
+                <form class="contact-form" method="POST" action="https://formspree.io/f/xvgrlkwl">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div id="form-error" class="form-error"></div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Send Message →</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-      <article class="project">
-        <h2>5. Mine Dodger</h2>
-        <p>Developed an interactive game where players uncover hidden diamonds while avoiding mines. Used JavaScript for dynamic mine placement, game logic, and DOM manipulation to provide real-time feedback and reset functionality.</p>
-        <p><b>Technologies Used:</b> HTML, CSS, JavaScript</p>
-        <a href="https://github.com/Prakash453345/MINE_DODGER.git" target="_blank">GitHub Link</a><br><br>
-        <a href="https://prakash453345.github.io/MINE_DODGER/" target="_blank">Live Demo</a>
-      </article>
-    </div>
-  </section>
+    <footer id="footer">
+        <div class="footer-inner">
+            <span>© 2025 Prakash Raj Badugula</span>
+            <span class="footer-mid">Designed & built with care</span>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/prakash-badugula-78ba90315/" target="_blank">LinkedIn</a>
+                <a href="https://prakash453345.github.io/Portfolio/" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Career Objective Section -->
-  <section id="objective">
-    <div class="container">
-      <h1>Career Objective</h1>
-      <p>
-        I aim to grow as a full-stack or backend developer by working on real-world applications that solve real problems. I'm open to internships and opportunities where I can apply my skills, learn from experienced developers, and build scalable, efficient systems.
-      </p>
-    </div>
-  </section>
+    <button id="btt" aria-label="Back to top">↑</button>
 
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <div class="container">
-      <h1>Certifications</h1>
-      <ul>
-        <li>Oracle Certified Foundations Associate - Oracle</li>
-        <li>Oracle Certified GEN-AI Professional - Oracle</li>
-        <li>JavaScript Developer Certification - FreeCodeCamp</li>
-        <li>Web Development Virtual Internship Certification - Forage</li>
-      </ul>
-    </div>
-  </section>
+    <script>
+        // Stars canvas
+        const canvas = document.getElementById('stars');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
 
-  <!-- Contact Section -->
-  <section id="contact">
-  <div class="container">
-    <h1>Contact</h1>
-    <p>If you'd like to get in touch, just fill out the form below:</p>
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
 
-    <form action="https://formspree.io/f/xvgrlkwl" method="POST">
-      <label for="name">Name</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
+        function createStars() {
+            stars = [];
+            for (let i = 0; i < 150; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: 0.3 + Math.random() * 1.1,
+                    baseOpacity: 0.15 + Math.random() * 0.4,
+                    speed: 0.0004 + Math.random() * 0.001,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+        }
 
-      <label for="email">Email</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => {
+                const opacity = star.baseOpacity * (0.5 + 0.5 * Math.sin(Date.now() * star.speed + star.phase));
+                ctx.fillStyle = star.r > 0.7 ? `rgba(241,245,249,${opacity})` : `rgba(56,189,248,${opacity})`;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
 
-      <label for="message">Message</label><br />
-      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea><br /><br />
+        function animate() {
+            drawStars();
+            requestAnimationFrame(animate);
+        }
 
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            createStars();
+        });
 
+        resizeCanvas();
+        createStars();
+        animate();
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Prakash Badugula</p>
-    </div>
-  </footer>
+        // Hero text rotator
+        const rotating = document.getElementById('hero-rotating');
+        const texts = ["web & AI", "the future", "MERN stack", "AI systems"];
+        let currentIndex = 0;
 
-  <script src="script.js"></script>
+        function rotateText() {
+            rotating.style.opacity = 0;
+            rotating.style.transform = 'translateY(-8px)';
+            setTimeout(() => {
+                rotating.textContent = texts[currentIndex];
+                rotating.style.opacity = 1;
+                rotating.style.transform = 'translateY(0)';
+                currentIndex = (currentIndex + 1) % texts.length;
+            }, 200);
+        }
+
+        setInterval(rotateText, 2800);
+
+        // Navbar scroll behavior
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll spy
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        const observerOptions = { threshold: 0.4 };
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                    if (activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('[data-reveal]');
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.08 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Count-up
+        const countElements = document.querySelectorAll('.stat-num');
+        const countObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    let current = 0;
+                    const increment = target / 120;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        entry.target.textContent = Math.floor(current);
+                    }, 10);
+                    countObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        countElements.forEach(el => countObserver.observe(el));
+
+        // Skill bars
+        const proficiency = document.querySelector('.proficiency');
+        const barObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.prof-fill').forEach(fill => {
+                        fill.style.width = fill.dataset.w + '%';
+                    });
+                    barObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (proficiency) barObserver.observe(proficiency);
+
+        // Project filter
+        const filterButtons = document.querySelectorAll('.ftab');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.f;
+                projectCards.forEach(card => {
+                    const matches = filter === 'all' || card.dataset.f === filter;
+                    if (matches) {
+                        card.style.display = 'block';
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                        setTimeout(() => card.style.display = 'none', 250);
+                    }
+                });
+            });
+        });
+
+        // Back to top
+        const btt = document.getElementById('btt');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                btt.classList.add('visible');
+            } else {
+                btt.classList.remove('visible');
+            }
+        });
+
+        btt.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksEl = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinksEl.classList.toggle('open');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksEl.classList.remove('open');
+            });
+        });
+
+        // Form submit
+        const form = document.querySelector('.contact-form');
+        const errorEl = document.getElementById('form-error');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            errorEl.style.display = 'none';
+            if (!name || !email || !message) {
+                errorEl.textContent = 'Please fill in all fields.';
+                errorEl.style.display = 'block';
+                return;
+            }
+            const btn = form.querySelector('button');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    btn.textContent = 'Sent! ✓';
+                    form.reset();
+                    errorEl.style.display = 'none';
+                } else {
+                    btn.textContent = 'Failed, try again';
+                }
+                setTimeout(() => {
+                    btn.textContent = 'Send Message →';
+                    btn.disabled = false;
+                }, 3000);
+            }).catch(() => {
+                btn.textContent = 'Error, try again';
+                setTimeout(() => {
+                    btn.textContent = 'Send Message →';
+                    btn.disabled = false;
+                }, 3000);
+            });
+        });
+    </script>
 </body>
 </html>
